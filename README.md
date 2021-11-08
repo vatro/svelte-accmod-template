@@ -17,4 +17,4 @@ If you want to use TypeScript, after installation (*or right after cloning the t
 node scripts/setupTypeScript.js
 ```
 
-Note that the `scripts/doAfterInstall.js` is running / has to run after each install modifying `rollup-plugin-svelte` & `svelte-preprocess` plugins as well as deleting the `svelte` folder from `node_modules`. See the script itself for more details. Improvement suggestions or a simpler solution suggestions are always welcome!
+Note that the `scripts/doAfterInstall.js` is running / has to run after each install modifying `rollup-plugin-svelte` & `svelte-preprocess` plugins as well as deleting the `svelte` folder from `node_modules`. See the script itself for more details. Improvement suggestions or a simpler solution suggestions are always welcome! 🙂
