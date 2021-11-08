@@ -2,7 +2,7 @@
 
 This is a modified version of the [official svelte starter template](https://github.com/sveltejs/template) using [svelte-accmod](https://github.com/vatro/svelte-accmod) instead of [svelte](https://github.com/sveltejs/svelte). The installation process is basically the same. Standard deployment workflows should be the same (*not tested yet*).
 
-# Basic usage
+## Basic usage
 
 Using [degit](https://github.com/Rich-Harris/degit):
 
