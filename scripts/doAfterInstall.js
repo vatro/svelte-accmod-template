@@ -33,7 +33,7 @@ if (
     projectRoot,
     "node_modules/svelte-preprocess/dist/transformers/typescript.js"
   );
-  tsjs_file = fs.readFileSync(tsjs_file_path, "utf8");
+  let tsjs_file = fs.readFileSync(tsjs_file_path, "utf8");
   tsjs_file = tsjs_file.replace("svelte/compiler", "svelte-accmod/compiler");
   tsjs_file = tsjs_file.replace(
     "svelte/package.json",
