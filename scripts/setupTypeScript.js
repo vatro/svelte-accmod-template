@@ -75,18 +75,9 @@ rollupConfig = rollupConfig.replace(
 );
 fs.writeFileSync(rollupConfigPath, rollupConfig)
 
-// Add TSConfig -> modified for 'svelte-accmod'
+// Add TSConfig
 const tsconfig = `{
   "extends": "@tsconfig/svelte/tsconfig.json",
-
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "svelte": [
-      "node_modules/svelte-accmod"
-      ]
-    }
-  },
 
   "include": ["src/**/*"],
   "exclude": ["node_modules/*", "__sapper__/*", "public/*"]
@@ -94,9 +85,9 @@ const tsconfig = `{
 const tsconfigPath =  path.join(projectRoot, "tsconfig.json")
 fs.writeFileSync(tsconfigPath, tsconfig)
 
-// Add global.d.ts -> modified for 'svelte-accmod'
+// Add global.d.ts
 const dtsPath =  path.join(projectRoot, "src", "global.d.ts")
-fs.writeFileSync(dtsPath, `/// <reference types="svelte-accmod" />`)
+fs.writeFileSync(dtsPath, `/// <reference types="svelte" />`)
 
 // Delete this script, but not during testing
 if (!argv[2]) {
@@ -126,5 +117,5 @@ fs.writeFileSync(path.join(projectRoot, ".vscode", "extensions.json"), `{
 console.log("Converted to TypeScript.")
 
 if (fs.existsSync(path.join(projectRoot, "node_modules"))) {
-  console.log("\nYou will need to re-run your dependency manager to get started (e.g. run 'npm i' again).")
+  console.log("\nYou will need to re-run your dependency manager to get started.")
 }
